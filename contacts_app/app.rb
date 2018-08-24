@@ -6,4 +6,5 @@ enable :sessions
 
 get '/' do
 
+    erb :dashboard
 end
