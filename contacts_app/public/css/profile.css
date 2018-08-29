@@ -1,0 +1,75 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	background: #000;
+}
+
+@keyframes true {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.content {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	display: flex;
+	animation: true 3s;
+	font-size: 1rem;
+}
+
+
+
+.row {
+	font-family: 'Quicksand';
+	text-align: center;
+	background-color: rgba(53, 38, 70, 1);
+	flex: 1;
+}
+
+.row nav {
+	position: relative;
+	bottom: -75%;
+}
+
+.row nav h2 {
+	color: #fff;
+	font-size: 1rem;
+}
+
+.row header h1 {
+	color: #fff;
+}
+
+.row2 {
+	font-family: 'Quicksand';
+	text-align: center;
+	background-color: rgba(180, 180, 180, 1);
+	flex: 3;
+	border-right: 2px solid #000;
+}
+
+.row2 input {
+	outline: none;
+	border: 1px solid #777;
+	border-radius: 10px;
+}
+
+.row2 nav h2 {
+	border: 1px solid #000;
+}
+
+.row3 {
+	background-color: rgba(225, 222, 228, 1);
+	flex: 5;
+}
