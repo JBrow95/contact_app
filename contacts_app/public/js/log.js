@@ -17,3 +17,14 @@ right.addEventListener('mouseenter', () => {
 right.addEventListener('mouseleave', () => {
 	container.classList.remove('hover-right');
 });
+
+function contactFunc() {
+	var c = document.getElementById('display');
+	if (c.style.display === "none") {
+		c.style.display = "block";
+		c.style.animation = "long 1s";
+	} else {
+		c.style.animation = "short 1s";
+		c.style.display = "none";
+	}
+}

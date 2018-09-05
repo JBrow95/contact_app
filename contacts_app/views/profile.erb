@@ -6,33 +6,66 @@
 <body>
 	<div class="content">
 		<div class="row">
-			<header>
-				<h1>Logo</h1>
-			</header>
+			<div class="user-avi">
+					<img src="/images/usericon.png">
+			</div>
+
+			<div class="user-name">
+				<h2>Username</h2>
+			</div>
 
 			<nav>
+				<h2 onclick="contactFunc()">Contacts</h2>
+				<h2 onclick="newcon()">New Contact</h2>
+			</nav>
+
+			<div id="myModal" class="modal">
+				
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>make new contact</p>
+				</div>
+			</div>
+
+			<div class="footer">
 				<h2>Edit Profile</h2>
-				<h2>Sign Out</h2>
-			</nav>
-		</div>
-
-		<div class="row2">
-			<header>
-				<h3>Search</h3>
-				<input type="text">
-			</header>
-
-			<nav>
-				<h2>Contacts</h2>
-				<h2>New Contact</h2>
-			</nav>
+				<a href="/"><h2>Sign Out</h2></a>
+			</div>
 		</div>
 
 		<div class="row3">
 			<header>
-				<h2></h2>
+				<form>
+					<input type="text" name="search" placeholder="Search..">
+				</form>
 			</header>
+			<div id="display">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Address</th>
+				    <th>Phone</th>
+				  </tr>
+				  <tr>
+				    <td>Justin Browning</td>
+				    <td>206 Way Street</td>
+				    <td>304 896 5435</td>
+				  </tr>
+				  <tr>
+				    <td>John Doe</td>
+				    <td>132 Main Street</td>
+				    <td>304 687 5985</td>
+				  </tr>
+				  <tr>
+				    <td>Ernst Handel</td>
+				    <td>546 Washington Street</td>
+				    <td>304 946 2564</td>
+				  </tr>
+				</table>
+			</div>		
 		</div>
 	</div>
 	
+	<script src="/js/log.js"></script>
+	<script src="/js/new.js"></script>
 </body>
