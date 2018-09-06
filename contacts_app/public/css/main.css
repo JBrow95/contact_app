@@ -71,6 +71,17 @@ span {
 	color: #ff3d47;
 }
 
+p {
+	font-size: 2rem;
+	color: #ccc;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+
 h1 {
 	font-size: 4rem;
 	color: #fff;

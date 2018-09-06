@@ -84,13 +84,14 @@ body {
 .user-name h2 {
 	color: #fff;
 	font-size: 1.2rem;
-	 animation: true 3s;
+	animation: true 3s;
+	font-weight: lighter;
 }
 
 .user-avi img {
 	margin-top: 50px;
-	height: 40%;
-	width: 40%;
+	height: 30%;
+	width: 30%;
 	 animation: true 3s;
 }
 
@@ -123,6 +124,20 @@ body {
 
 }
 
+@keyframes {
+	to {
+		width: 0%;
+	}
+	from {
+		width: 100%;
+	}
+}
+
+.ac {
+	color: green;
+	font-family: 'Quicksand';
+}
+
 .row nav h2:hover {
 	color: #000;
 }
@@ -136,14 +151,16 @@ body {
 
 
 table {
+	position: relative;
 	border-collapse: collapse;
 	margin: 40px auto 0 auto;
 	color: #fff;
     font-family: 'Quicksand';
-    width: 100%;
+    width: 75%;
 }
 
 td, th {
+	line-height: 40px;
 	padding: 10px;
 	font-family: 'Quicksand';
     text-align: left;
@@ -155,6 +172,7 @@ tr:nth-child(even) {
 }
 
 form input[type=text] {
+	color: #fff;
 	outline: none;
 	margin-top: 40px;
     width: 15%;
@@ -170,7 +188,8 @@ form input[type=text] {
 }
 
 form input[type=text]:focus {
-    width: 55%;
+    width: 35%;
+    background-color: rgba(255,255,255, 0.1);
 }
 
 ::placeholder {
