@@ -252,6 +252,20 @@ tr:nth-child(even) {
 
 }
 
+.modal-content input[type=number] {
+	width: 100%;
+	display: block;
+	margin-top: 1rem;
+	outline: none;
+	border: 1px solid #681399;
+	line-height: 0.4rem;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-size: 2rem;
+
+}
+
+
 .modal-content input[type=submit] {
 	outline: none;
 	border: 1px solid #000;
