@@ -124,7 +124,8 @@ form input {
 	margin: 5px;
 	border: none;
 	padding: 5px;
-	font-size: 1rem;
+	font-size: 2rem;
+	line-height: 30px;
 }
 
 button {
@@ -137,6 +138,10 @@ button {
 	background: transparent;
 	padding: 5px 15px;
 	font-size: 1rem;
+}
+
+button:hover {
+	background-color: #fff;
 }
 
 .button {
@@ -156,6 +161,7 @@ button {
 	text-decoration: none;
 	transform: translateX(-50%);
 }
+
 
 .split.left button:hover {
 	background-color: var(--left-button-hover-color);

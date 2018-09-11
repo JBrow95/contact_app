@@ -171,7 +171,7 @@ tr:nth-child(even) {
     background-color: #681399;
 }
 
-form input[type=text] {
+.row3 form input[type=text] {
 	color: #fff;
 	outline: none;
 	margin-top: 40px;
@@ -187,11 +187,103 @@ form input[type=text] {
 
 }
 
-form input[type=text]:focus {
+.row3 form input[type=text]:focus {
     width: 35%;
     background-color: rgba(255,255,255, 0.1);
 }
 
-::placeholder {
+.row3 input::placeholder {
 	color: #fff;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 40%; 
+    height: 50%;
+}
+
+
+
+.close {
+	margin-top: 0;
+    color: #aaa;
+    float: right;
+    font-size: 58px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal-content input[type=text] {
+	width: 100%;
+	display: block;
+	margin-top: 1rem;
+	outline: none;
+	border: 1px solid #681399;
+	line-height: 0.4rem;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-size: 2rem;
+
+}
+
+.modal-content input[type=submit] {
+	outline: none;
+	border: 1px solid #000;
+	background: #681399;
+	color: #fff;
+	font-size: 2rem;
+	font-family: 'Quicksand';
+	margin-top: 15px;
+}
+
+.modal-content input[type=submit]:hover {
+	background-color: #681377;
+}
+
+@media(max-height: 700px) {
+	.footer {
+		margin-top: 20px;
+		animation: true 3s;
+	}
+
+	.row nav h2 {
+		cursor: pointer;
+		letter-spacing: 5px;
+		display: block;
+		color: #fff;
+		border: 1px solid #3c015e;
+		padding: 55px;
+		margin: 40px auto 0 auto;
+	    width: 50%;
+	    border-radius: 10px;
+	    background: #681399;
+	    box-shadow: 0 10px 20px rgba(0,0,0, 0.1);
+	    animation: true 3s;
+	}
 }

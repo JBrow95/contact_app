@@ -22,12 +22,11 @@
         
         <div class="split right">
             <h1>Create Account</h1>
-            <p><%= error%></p>
             <form method="post" action="/newuser">
-                <input type="text" placeholder="Username" name="new_user"><br>
-                <input type="password" placeholder="Password" name="new_pass"><br>
+                <input type="text" placeholder="Username" name="new_user" minlength="6"><br>
+                <input type="password" placeholder="Password" name="new_pass" minlength="8"><br>
                 <input type="password" placeholder="Confirm Password" name="confirm"><br>
-                <button>Sign In</button>
+                <button>Create</button>
             </form>
         </div>
     </div>

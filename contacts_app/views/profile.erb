@@ -11,21 +11,26 @@
 			</div>
 
 			<div class="user-name">
-				<h2>Username</h2>
+				<h2><%= username%></h2>
 			</div>
 
 			<nav>
 				<h2 onclick="contactFunc()">Contacts</h2>
-				<h2 onclick="newcon()">New Contact</h2>
+				<h2 id="myBtn">New Contact</h2>
 			</nav>
 
-		<!-- 	<div id="myModal" class="modal">
+			<div id="myModal" class="modal">
 				
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<p>make new contact</p>
+					<form method="post" action="contacts">
+						<input type="text" name="person" placeholder="Name">
+						<input type="text" name="address" placeholder="Address">
+						<input type="text" name="phone" placeholder="Phone">
+						<input type="submit" value="Create">
+					</form>
 				</div>
-			</div> -->
+			</div>
 
 			<div class="footer">
 				<h2>Edit Profile</h2>
@@ -41,26 +46,20 @@
 			</header>
 			<div id="display">
 				<table>
+					<tr>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Phone</th>
+						<th></th>
+					</tr>
+					<% res_arr.each do |r|%>
 				  <tr>
-				    <th>Name</th>
-				    <th>Address</th>
-				    <th>Phone</th>
+				    <td><%= r['names']%></td>
+				    <td><%= r['address']%></td>
+				    <td><%= r['phone']%></td>
+				    <td id="del" style="font-size: 28px"><button id="close_btn" style="cursor: pointer;">&times;</button></td>
 				  </tr>
-				  <tr>
-				    <td>Justin Browning</td>
-				    <td>206 Way Street</td>
-				    <td>304 896 5435</td>
-				  </tr>
-				  <tr>
-				    <td>John Doe</td>
-				    <td>132 Main Street</td>
-				    <td>304 687 5985</td>
-				  </tr>
-				  <tr>
-				    <td>Ernst Handel</td>
-				    <td>546 Washington Street</td>
-				    <td>304 946 2564</td>
-				  </tr>
+				  <% end%>
 				</table>
 			</div>		
 		</div>
