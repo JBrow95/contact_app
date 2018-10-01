@@ -45,7 +45,7 @@
 				</form>
 			</header>
 			<div id="display">
-				<table>
+				<table id="table">
 					<tr>
 						<th>Name</th>
 						<th>Address</th>
@@ -57,7 +57,7 @@
 				    <td><%= r['names']%></td>
 				    <td><%= r['address']%></td>
 				    <td><%= r['phone']%></td>
-				    <td id="del" style="font-size: 28px"><button id="close_btn" style="cursor: pointer;">&times;</button></td>
+					<td id="del" style="font-size: 28px"><button id="close_btn" onclick="clicker()" style="cursor: pointer;">&times;</button></td>
 				  </tr>
 				  <% end%>
 				</table>
@@ -67,4 +67,19 @@
 	
 	<script src="/js/log.js"></script>
 	<script src="/js/new.js"></script>
+	<script>
+
+
+		var index, table = document.getElementById('table');
+		for(var i = 0; i < table.rows.length; i++)
+		{
+			table.rows[i].cells[3].onclick = function()
+			{
+				index = this.parentElement.rowIndex;
+				table.deleteRow(index);
+				console.log(index);
+			};
+	}
+
+	</script>
 </body>

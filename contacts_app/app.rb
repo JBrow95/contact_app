@@ -42,6 +42,8 @@ get '/profile' do
 	res.each do |r|
 		res_arr << r
 	end
+
+
 	username = session[:user_name]
 	erb :profile, locals:{username: username, res_arr: res_arr}
 end
@@ -53,3 +55,4 @@ post '/contacts' do
 	conn.exec_prepared('cons', [params[:person], params[:address], params[:phone], session[:id]])
 	redirect '/profile'
 end
+
