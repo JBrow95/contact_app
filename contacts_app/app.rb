@@ -56,3 +56,36 @@ post '/contacts' do
 	redirect '/profile'
 end
 
+post '/delete_con' do
+	id = params[:id]
+
+	conn.exec("DELETE FROM contact_info WHERE id = '#{params[:id]}'")
+	redirect '/profile'
+end
+
+get '/update_con' do
+	names = names || ""
+	phone = phone || ""
+	address = address || ""
+	res_arr = res_arr || []
+	owner = session[:id]
+	id = params[:id2]
+
+	conn.exec("UPDATE contacts SET names = '#{names}', phone = '#{phone}', address = '#{address}' WHERE id = '#{id}'")
+	res = conn.exec("SELECT * FROM contact_info WHERE owner = '#{session[:id]}'")
+	res_arr = []
+	res.each do |r|
+		res_arr << r
+	end
+
+	erb :phonebook, locals:{res_arr: res_arr}
+end
+
+post '/update_con' do
+	id = id || ""
+	names = params[:names2]
+	phone = params[:phone2]
+	address = params[:address2]
+
+	redirect '/profile'
+end
